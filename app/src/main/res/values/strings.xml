@@ -2,4 +2,7 @@
     <string name="app_name">SmallGame</string>
     <string name="play">Play</string>
     <string name="max_score">MAX SCORE</string>
+    <string name="back_to_home">TO MAIN MENU</string>
+    <string name="restart">RESTART</string>
+    <string name="your_score">Your score:</string>
 </resources>

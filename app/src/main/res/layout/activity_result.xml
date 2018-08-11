@@ -3,24 +3,65 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.sorokin.dev.smallgame.MainActivity">
+    tools:context="com.sorokin.dev.smallgame.ResultActivity">
+
 
     <com.sorokin.dev.smallgame.MatrixEffectView
         android:id="@+id/matrix_background_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#77000000"/>
+
+    <TextView
+        android:id="@+id/current_result_desctibe_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/your_score"
+        android:textSize="24sp"
+        android:shadowRadius="8"
+        android:shadowColor="#fff"
+        android:textColor="@color/colorWhite"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/current_result_value_text_view"/>
+
+    <TextView
+        android:id="@+id/current_result_value_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20240000"
+        android:textSize="48sp"
+        android:shadowRadius="8"
+        android:shadowColor="#fff"
+        android:textColor="@color/colorWhite"
+        android:layout_marginBottom="32dp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/restart_button"/>
+
     <Button
-        android:id="@+id/play_button"
+        android:id="@+id/restart_button"
         android:layout_width="256dp"
         android:layout_height="64dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:background="@drawable/button_background"
-        android:shadowColor="#fff"
-        android:shadowRadius="8"
-        android:text="@string/play"
+        android:text="@string/restart"
         android:textColor="@color/colorWhite"
+        android:textSize="32sp" />
+
+    <Button
+        android:id="@+id/home_button"
+        android:layout_width="256dp"
+        android:layout_height="64dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_background"
+        android:text="@string/back_to_home"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/colorWhite"
+        android:layout_below="@id/restart_button"
         android:textSize="32sp" />
 
     <View

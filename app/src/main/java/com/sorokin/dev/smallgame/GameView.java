@@ -128,6 +128,7 @@ class GameView extends SurfaceView implements SurfaceHolder.Callback {
 
     public void update(){
 
+
         int flyCount = 0;
 
         for(int x = 0; x < fWidth; ++x){
@@ -182,15 +183,18 @@ class GameView extends SurfaceView implements SurfaceHolder.Callback {
             gameField[newCubeX][0] = numbers[newCubeValue];
         }
 
-        boolean isFail = true;
+        boolean f = true;
         for(int x = 0; x < fWidth; ++x){
-            if(gameField[x][0] == 0){
-                isFail = false;
+            for(int y = 0; y < fHeight; ++y){
+                if(gameField[x][y] == 0){
+                    f = false;
+                }
             }
+
         }
-        if(isFail){
+        if(f){
             Log.e("FAIL", "IS FAIL");
-            isFail = false;
+            isFail = f;
         }
     }
 
@@ -306,7 +310,7 @@ class GameView extends SurfaceView implements SurfaceHolder.Callback {
                     }
                 }
                 try {
-                    Thread.sleep(10);
+                    Thread.sleep(12);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
