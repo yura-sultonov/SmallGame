@@ -3,6 +3,7 @@ package com.sorokin.dev.smallgame;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -16,12 +17,27 @@ public class ResultActivity extends Activity {
     private int result = 0;
     private int bestResult = 0;
 
+    private class MyLooper extends Thread {
+        public Handler mHandler;
+
+        public boolean playing = true;
+
+        public void run() {
+            Music music = new Music();
+            music.playTrack(music.musicToLoose());
+
+        }
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
         initialValues();
         initView();
+        MyLooper mLooper = new MyLooper();
+        mLooper.start();
+
     }
 
     private void initialValues() {

@@ -85,4 +85,10 @@ public class GameActivity extends Activity {
 
     }
 
+    @Override
+    protected void onStop() {
+        super.onStop();
+        mLooper.playing = false;
+    }
+
 }

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SmallGame</string>
+    <string name="app_name">TetriX</string>
     <string name="play">Play</string>
     <string name="max_score">MAX SCORE</string>
     <string name="back_to_home">TO MAIN MENU</string>

@@ -22,7 +22,7 @@ public class MainActivity extends Activity {
     private void initViews() {
         bestResultTextView = findViewById(R.id.max_solve_value_text_view);
         playButton = findViewById(R.id.play_button);
-        bestResultTextView.setText("2048");
+        bestResultTextView.setText("" + ResultsRepository.getInstance(this).getBestResult());
         playButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
