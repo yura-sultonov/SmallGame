@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sorokin.dev.smallgame.ResultActivity">
+
+    <com.sorokin.dev.smallgame.MatrixEffectView
+        android:id="@+id/matrix_background_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/current_result_desctibe_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/your_score"
+        android:textSize="24sp"
+        android:textColor="@color/colorWhite"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/current_result_value_text_view"/>
+
+    <TextView
+        android:id="@+id/current_result_value_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20240000"
+        android:textSize="48sp"
+        android:textColor="@color/colorWhite"
+        android:layout_marginBottom="32dp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/restart_button"/>
+
+    <Button
+        android:id="@+id/restart_button"
+        android:layout_width="256dp"
+        android:layout_height="64dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/button_background"
+        android:text="@string/restart"
+        android:textColor="@color/colorWhite"
+        android:textSize="32sp" />
+
+    <Button
+        android:id="@+id/home_button"
+        android:layout_width="256dp"
+        android:layout_height="64dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_background"
+        android:text="@string/back_to_home"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/colorWhite"
+        android:layout_below="@id/restart_button"
+        android:textSize="32sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignTop="@id/max_solve_describe_text_view"
+        android:background="@color/colorTransparencyBlack" />
+
+    <TextView
+        android:id="@+id/max_solve_describe_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/max_solve_value_text_view"
+        android:layout_centerHorizontal="true"
+        android:text="@string/max_solve"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/max_solve_value_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="24sp" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:layout_alignEnd="@id/max_solve_value_text_view"
+        android:layout_alignStart="@id/max_solve_value_text_view"
+        android:layout_below="@id/max_solve_describe_text_view"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/bottom_line" />
+</RelativeLayout>

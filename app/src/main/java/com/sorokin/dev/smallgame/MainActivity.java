@@ -22,7 +22,8 @@ public class MainActivity extends AppCompatActivity {
     private void initViews() {
         bestResultTextView = findViewById(R.id.max_solve_value_text_view);
         playButton = findViewById(R.id.play_button);
-        bestResultTextView.setText("2048");
+        int bestResult = ResultsRepository.getInstance(this).getBestResult();
+        bestResultTextView.setText(bestResult);
         playButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

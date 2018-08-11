@@ -2,4 +2,7 @@
     <string name="app_name">SmallGame</string>
     <string name="play">Play</string>
     <string name="max_solve">MAX SOLVE</string>
+    <string name="back_to_home">BACK TO HOME</string>
+    <string name="restart">RESTART</string>
+    <string name="your_score">Your score:</string>
 </resources>
