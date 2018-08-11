@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SmallGame</string>
+    <string name="play">Play</string>
+    <string name="max_score">MAX SCORE</string>
 </resources>

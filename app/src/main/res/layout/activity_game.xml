@@ -4,10 +4,34 @@
     android:layout_height="match_parent"
     android:layout_width="match_parent" >
 
+    <com.sorokin.dev.smallgame.MatrixEffectView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <View
+        android:background="#CC000000"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
     <com.sorokin.dev.smallgame.GameView
         android:id="@+id/gameView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true" />
+
+    <TextView
+        android:id="@+id/tvScores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:textSize="24sp"
+        android:shadowRadius="8"
+        android:textColor="@android:color/white"
+        android:shadowColor="#fff"
+
+        android:text="Scores: " />
 
 </RelativeLayout>
